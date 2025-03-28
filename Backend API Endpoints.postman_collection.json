@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "409b92cd-a2b9-4f08-9320-2ee8efbcbdc1",
+		"name": "Backend API Endpoints",
+		"description": "**RESTful API with endpoints for:**\n\n1. **User registration/profile creation**\n    \n2. **Profile retrieval**\n    \n3. **Profile update**",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "43564180"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"User1\",\r\n    \"email\": \"user1@gmail.com\",\r\n    \"password\": \"user123\",\r\n    \"address\": \"india\",\r\n    \"bio\": \"Hi there this is bio\",\r\n    \"profilePicture\": \"https://google.com/cat.png\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/v1/users/register"
+			},
+			"response": []
+		},
+		{
+			"name": "getProfile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/api/v1/users/profile"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProfile",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"User Updated\",\r\n    \"password\": \"user12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/v1/users/profile/update"
+			},
+			"response": []
+		},
+		{
+			"name": "LoginUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user1@gmail.com\",\r\n    \"password\": \"user12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/v1/users/login"
+			},
+			"response": []
+		}
+	]
+}
